@@ -3,16 +3,17 @@ defmodule Import do
   Documentation for Import.
   """
 
-  @doc """
-  Hello world.
+  def main(args) do
+    args |> process
+  end
 
-  ## Examples
+  # Start processing if 2 args are supplied
+  def process([source, path]) do
+    IO.puts "I have 2 args: " <> source <> " and " <> path  
+  end
 
-      iex> Import.hello
-      :world
-
-  """
-  def hello do
-    :world
+  # Raise an error in any other cases
+  def process(_) do
+    Error.usage
   end
 end

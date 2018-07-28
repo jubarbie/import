@@ -22,3 +22,5 @@ erl_crash.dump
 # Ignore package tarball (built via "mix hex.build").
 import-*.tar
 
+# Ignore the executable file
+import
