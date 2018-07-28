@@ -20,7 +20,7 @@ defmodule Import.MixProject do
 
   defp deps do
     [
-      {:poison, "~> 3.1"}
+      {:yaml_elixir, "~> 2.1.0"},
     ]
   end
 end

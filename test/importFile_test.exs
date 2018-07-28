@@ -3,15 +3,17 @@ defmodule ImportFileTest do
   doctest Import
 
   test "good file format" do
-    assert ImportFile.checkFormat({:path, "path/to/good.json"}) == {:ok,[path: "path/to/good.json", format: :json]} 
+    assert ImportFile.getFormat({:path, "path/to/good.json"}) == {:ok, :json} 
   end
     
   test "wrong file format" do
-    assert ImportFile.checkFormat({:path, "path/to/good.psd"}) == {:nok,[path: "path/to/good.psd"]} 
+    {result, _} = ImportFile.getFormat({:path, "path/to/good.psd"}) 
+    assert result == :error
   end
   
   test "no file format" do
-    assert ImportFile.checkFormat({:path, "path/to/good"}) == {:nok,[path: "path/to/good"]} 
+    {result, _} = ImportFile.getFormat({:path, "path/to/good"}) 
+    assert result == :error 
   end
 
 end

@@ -9,8 +9,8 @@ defmodule Import do
 
   # Start processing if 2 args are supplied
   def process([source, path]) do
-    IO.puts source
-    {:path, path} |> ImportFile.checkFormat |> ImportFile.getFileContent |> ImportFile.printFileContent
+    {:ok, format} = ImportFile.getFormat {:path, path}
+    [source: source, path: path, format: format] |> Product.createProductList |> Enum.map (fn {:ok, p} -> Product.importProduct p end)
   end
 
   # Raise an error in any other cases
