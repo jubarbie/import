@@ -9,7 +9,8 @@ defmodule Import do
 
   # Start processing if 2 args are supplied
   def process([source, path]) do
-    IO.puts "I have 2 args: " <> source <> " and " <> path  
+    IO.puts source
+    {:path, path} |> ImportFile.checkFormat |> ImportFile.getFileContent |> ImportFile.printFileContent
   end
 
   # Raise an error in any other cases
