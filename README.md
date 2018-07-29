@@ -37,7 +37,7 @@ mix test
 ```
 
 ## Note
-It was my first application using Elixir. I'm even more excited about this language.
+It was my first application using Elixir. I'm even more excited about this language now.
 You can find my code in lib/ as you might know.
 I've been writing unit tests during my last internship but I'm still not very familiar with it, even though it seemed easier with Elixir.
 If I had more time I would have managed errors better and I would have written more tests.

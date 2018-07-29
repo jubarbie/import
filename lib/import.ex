@@ -12,7 +12,7 @@ defmodule Import do
     res = ImportFile.getFormat {:path, path}
     case res do
       {:ok, format} ->
-        [source: source, path: path, format: format] |> Product.createProductList |> Enum.map (fn {:ok, p} -> Product.importProduct p end)
+        [source: source, path: path] |> Product.createProductList |> Enum.map (fn {:ok, p} -> Product.importProduct p end)
       _ -> Error.fileFormat [path: path]
     end
   end
