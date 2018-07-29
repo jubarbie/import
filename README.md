@@ -37,10 +37,8 @@ mix test
 ```
 
 ## Note
-It was my first application using Elixir. I'm even more excited about this language now.
+It was my first application using Elixir. I'm even more excited about this language now and the possibilities it offers
 You can find my code in lib/ as you might know.
 I've been writing unit tests during my last internship but I'm still not very familiar with it, even though it seemed easier with Elixir.
 If I had more time I would have managed errors better and I would have written more tests.
-
-
-
+I tried to make the production importation as flexible as possible using a "mock" (check [lib/product.ex](https://github.com/jubarbie/import/blob/master/lib/product.ex)) that describe how every sources is formating its data.
