@@ -16,6 +16,7 @@ git clone https://github.com/jubarbie/import
 That's it. Check usage section to read more about how to use
 
 ## Usage
+Go inside import directory that you just cloned
 ```
 cd path/to/import
 ./import source path/to/file.[json|yaml]
